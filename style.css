@@ -1,0 +1,247 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+p { margin-bottom: 1em; }
+
+body p:last-child { margin-bottom: 0em; }
+
+.image1, .image2, .image3 {
+  position: relative;
+  opacity: 0.90;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.image1 {
+  background-image: url('media/IMG_2572.jpg');
+  min-height: 100%;
+}
+
+.image2 {
+  background-image: url('media/IMG_1301.JPG');
+  min-height: 600px;
+}
+
+.image3 {
+  background-image: url('media/IMG_0642.JPG');
+  min-height: 600px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.section-gallery {
+  background-color: #282e34;
+  color: #ddd;
+  padding-bottom:50px;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 5px;
+  line-height: 3;
+  text-transform: uppercase;
+}
+
+.ptext .caption {
+  position: absolute;
+  top: 35%;
+  width: 96%;
+  text-align: center;
+  color: white;
+  background-color: #11111150;
+  font-size: 16px;
+  letter-spacing: 5px;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 2%;
+  font-family: "Lato", sans-serif;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.review {
+  background-color: #11111150;
+  color: #fff;
+  padding: 3% 10%;
+  position: relative;
+  top: 50%;
+  width: 80%;
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  width: 90vw;
+  height: 100px;
+  padding: 2vh 5vw;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 5;
+}
+
+.title {
+  font-family: "Lato", sans-serif;
+  flex-grow: 5;
+  font-size: 30pt;
+  color: white;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  flex-grow: 1;
+  text-align: right;
+  color: white;
+  font-size: 15pt;
+}
+
+/* carousel styling */
+.Slide {
+  display: none;
+}
+
+#slide-image {
+  vertical-align: middle;
+  width: 90vw;
+  max-height: 80vh;
+  padding: 2vh 5vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.slideContainer {
+  margin: 0;
+  padding: 0;
+  max-width: 90vw;
+  position: relative;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-left: 10vw;
+  color: SlateGray;
+  opacity: 0.5;
+  font-weight: bolder;
+  font-size: 80px;
+  text-align: center;
+  transition: color 0.6s ease;
+}
+
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-left: 90vw;
+  color: SlateGray;
+  opacity: 0.5;
+  font-weight: lighter;
+  font-size: 80px;
+  text-align: center;
+  right: 0;
+  transition: color 0.6s ease;
+}
+
+.nextBtn:hover {
+  cursor: pointer;
+  color: white;
+  opacity: 1.0;
+}
+
+.prevBtn:hover {
+  cursor: pointer;
+  color: white;
+  opacity: 1.0;
+}
+
+.Navdot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  text-align: center;
+  background-color: SlateGray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.selected, .Navdot:hover {
+  background-color: white;
+}
+
+/* end carousel styling */
+
+.contact-link {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.contact-link:hover {
+  color: #8590a1;
+}
+
+.button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #11111170;
+}
+
+@media only screen and (min-device-width : 414px) and (max-device-width : 800px) and (orientation : portrait){
+  .image1, .image2, .image3 {
+    background-attachment: scroll;
+  }
+  h2 {
+    display: none;
+  }
+  .prevBtn,
+  .nextBtn,
+  .Caption {
+    font-size: 16px;
+  }
+}
